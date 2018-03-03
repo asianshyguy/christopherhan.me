@@ -1,0 +1,160 @@
+@font-face {
+    font-family: Avenir, sans-serif;
+    src: url("../assets/_global/fonts/Avenir.ttc");
+}
+/* @import url('https://fonts.googleapis.com/css?family=Josefin+Slab'); */
+@import url('https://fonts.googleapis.com/css?family=Inconsolata');
+
+body{
+    font-family: Avenir;
+    background-color: #FDFDFF;
+    color: #3B3B3B;
+}
+/* This is for Page Titles */
+.head1 {
+    font-family: Avenir;
+    font-size: 40pt;
+    font-weight: 600;
+}
+/* This is for Page Tag Lines */
+.head2 {
+    font-family: Avenir;
+    font-size: 30pt;
+    font-weight: 600;
+}
+/* This is for page details */
+.head3 {
+    font-family: 'Inconsolata', monospace;
+    font-size: 10pt;
+    line-height: 12pt;
+}
+.copy {
+    font-family: Avenir;
+    font-size: 11pt;
+    line-height: 16pt;
+    font-weight: 100;
+}
+.caption {
+    font-family: Avenir;
+    font-size: 10pt;
+    margin: -1px 0;
+    padding-top: 3px;
+    color: #3B3B3B;
+}
+a {
+    text-decoration: none;
+
+}
+a:visited {
+    color: inherit;
+}
+
+/*  */
+/* Navigation */
+#nav {
+    height: 100px;
+}
+#nav_container {
+    float: right;
+    position: relative;
+    margin-top: 4%;
+    margin-right: 10%; 
+}
+.temp_home {
+    display: block;
+    float: left;
+    position: relative;
+    margin-top: 4%;
+    margin-left: 10%;
+
+    font-size: 16pt;
+}
+.nav_link {
+    display: inline-block;
+    padding: 10px 6px 0px;
+    margin: 10px;
+    color: #3B3B3B;
+    border-bottom: 0px solid #7CDCFF;
+    font-size: 16pt;
+    line-height: 0pt;
+}
+.nav_link:hover {
+    border-bottom: 5px solid #7CDCFF;
+    transition-duration: .25s;
+}
+
+/*  */
+/* Footer */
+.footer{
+    margin-top: 50px;
+    padding: 8px;
+    width: 100%;
+    background-color: #3B3B3B;
+    color: #FDFDFF;
+    text-align: center;
+}
+
+
+/*  */
+/* Main Container */
+
+#main_container {
+    width: 80%;
+    margin: 15px auto 25px;
+}
+.title_content {
+    margin-left: 5px;
+}
+
+
+/*  */
+/* Media Grid */
+.row {
+    clear: both;
+    display: flex;
+    flex-wrap: wrap;
+	padding: 0px;
+	margin: 0px;
+}
+.col {
+    display: block;
+	float:left;
+    margin: 1% 0 1% 2%;
+    color: black;
+    text-align: center;
+}
+.col:first-child { margin-left: 0; } /* Not Really sure hwat this does */
+
+.span_1of3 {
+    width: 32%;
+}
+.span_1of4{
+    width: 23.5%;
+}
+.span_1of5 {
+    width: 18%;
+}
+.span_2of5 {
+    width: 32%;
+}
+
+/*  */
+/* The Spacer */
+.spacer {
+    height: 20px;
+}
+
+
+
+/* Gotta make it responsive */
+@media (max-width: 480px) {
+    .col {
+        margin: 1% 0 1% 0;
+    }
+    .span_1of3, .span_2of5 {
+        width: 100%
+    }
+    .span_1of5 {
+        width: 0%;
+    }
+}
