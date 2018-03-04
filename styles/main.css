@@ -10,6 +10,7 @@ body{
     background-color: #FDFDFF;
     color: #3B3B3B;
 }
+
 /* This is for Page Titles */
 .head1 {
     font-family: Avenir;
@@ -25,6 +26,7 @@ body{
 /* This is for page details */
 .head3 {
     font-family: 'Inconsolata', monospace;
+    margin: 0 0 20pt;
     font-size: 10pt;
     line-height: 12pt;
 }
@@ -33,6 +35,7 @@ body{
     font-size: 11pt;
     line-height: 16pt;
     font-weight: 100;
+    width: 65%;
 }
 .caption {
     font-family: Avenir;
@@ -48,31 +51,30 @@ a {
 a:visited {
     color: inherit;
 }
+br {
+    line-height: 28pt;
+}
+
 
 /*  */
 /* Navigation */
 #nav {
-    height: 100px;
+    padding: 4% 9% 0%;
+    margin: 0 0 50px;
 }
 #nav_container {
     float: right;
     position: relative;
-    margin-top: 4%;
-    margin-right: 10%; 
 }
-.temp_home {
+#home_container {
     display: block;
     float: left;
     position: relative;
-    margin-top: 4%;
-    margin-left: 10%;
-
-    font-size: 16pt;
 }
 .nav_link {
     display: inline-block;
     padding: 10px 6px 0px;
-    margin: 10px;
+    margin-right: 24px;
     color: #3B3B3B;
     border-bottom: 0px solid #7CDCFF;
     font-size: 16pt;
@@ -112,7 +114,6 @@ a:visited {
 .row {
     clear: both;
     display: flex;
-    flex-wrap: wrap;
 	padding: 0px;
 	margin: 0px;
 }
@@ -122,9 +123,12 @@ a:visited {
     margin: 1% 0 1% 2%;
     color: black;
     text-align: center;
-}
-.col:first-child { margin-left: 0; } /* Not Really sure hwat this does */
 
+    position: relative;
+}
+.col:first-child {
+    margin-left: 0;
+}
 .span_1of3 {
     width: 32%;
 }
@@ -139,19 +143,71 @@ a:visited {
 }
 
 /*  */
+/* Hover States */
+.border_overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%-60px;
+    width: 100%;
+    /* opacity: 0; */
+    transition: .2s ease-in-out;
+    outline: 0px solid #7CDCFF;
+    outline-offset: 0;
+}
+.border_overlay:hover {
+    /* opacity: 1; */
+    outline: 5px solid #7CDCFF;
+    outline-offset: -5px;
+}
+
+/*  */
 /* The Spacer */
 .spacer {
     height: 20px;
 }
 
+/*  */
+/* Vimeo Embed */
 
+.vimeo_embed {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0; overflow: hidden;
+    max-width: 100%;
+}
+.vimeo_embed iframe, .vimeo_embed object, .vimeo_embed embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
 
 /* Gotta make it responsive */
+/* Tab */
+@media (max-width: 800px) {
+    .copy{
+        width: 100%;
+    }
+    .row {
+        flex-wrap: wrap;
+    }
+    .col {
+        margin: 1% 2% 1% 0;
+    }
+    .span_1of4 {
+        width: 48%
+    }
+}
+/* Mobile */
 @media (max-width: 480px) {
     .col {
-        margin: 1% 0 1% 0;
+        margin: 1% 0 5% 0%;
     }
-    .span_1of3, .span_2of5 {
+    .span_1of3, .span_2of5, .span_1of4 {
         width: 100%
     }
     .span_1of5 {
