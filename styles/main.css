@@ -87,13 +87,26 @@ br {
 
 /*  */
 /* Footer */
-.footer{
-    margin-top: 50px;
-    padding: 8px;
-    width: 100%;
-    background-color: #3B3B3B;
-    color: #FDFDFF;
+#footer{
+    margin: 6% 0 0;
+    height: 160px;
+    padding: 24px;
     text-align: center;
+}
+.footer_divider {
+    width: 32%;
+    margin: auto;
+    border-top: 2px solid #3B3B3B;
+}
+.social_icon {
+    color: #3B3B3B;
+    margin-left: 2%;
+}
+.social_icon:hover{
+    color: #7CDCFF;
+}
+.social_icon:first-child {
+    margin-left: 0;
 }
 
 
@@ -171,7 +184,6 @@ br {
 
 /*  */
 /* Vimeo Embed */
-
 .vimeo_embed {
     position: relative;
     padding-bottom: 56.25%;
@@ -213,4 +225,8 @@ br {
     .span_1of5 {
         width: 0%;
     }
+    .footer_divider {
+        width: 80%;
+        border-top: 2px solid #3B3B3B;
+    }    
 }
