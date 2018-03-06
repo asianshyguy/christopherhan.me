@@ -26,7 +26,7 @@ body{
 /* This is for page details */
 .head3 {
     font-family: 'Inconsolata', monospace;
-    margin: 0 0 20pt;
+    margin: 8pt 0 20pt;
     font-size: 10pt;
     line-height: 12pt;
 }
@@ -35,10 +35,11 @@ body{
     font-size: 11pt;
     line-height: 16pt;
     font-weight: 100;
-    width: 65%;
+    /* width: 65%; */
+    max-width: 750px;
 }
 .caption {
-    font-family: Avenir;
+    font-family: 'Inconsolata', monospace;
     font-size: 10pt;
     margin: -1px 0;
     padding-top: 3px;
@@ -92,11 +93,12 @@ br {
     height: 160px;
     padding: 24px;
     text-align: center;
+    font-family: 'Inconsolata', monospace;
 }
 .footer_divider {
     width: 32%;
     margin: auto;
-    border-top: 2px solid #3B3B3B;
+    border-top: 1px solid #3B3B3B;
 }
 .social_icon {
     color: #3B3B3B;
@@ -155,6 +157,7 @@ br {
     width: 32%;
 }
 
+
 /*  */
 /* Hover States */
 .border_overlay{
@@ -204,9 +207,6 @@ br {
     .copy{
         width: 100%;
     }
-    .row {
-        flex-wrap: wrap;
-    }
     .col {
         margin: 1% 2% 1% 0;
     }
@@ -216,6 +216,25 @@ br {
 }
 /* Mobile */
 @media (max-width: 480px) {
+    /* Nav */
+    .nav_link{
+        margin-right: 8px;
+        font-size: 12pt;
+    }
+
+    /* Fonts */
+    .head1 {
+        font-size: 32pt;
+        line-height: 35pt;
+    }
+    .head3 {
+        margin: 16pt 0 16pt;
+    }
+
+    /* Grids */
+    .row {
+        flex-wrap: wrap;
+    }
     .col {
         margin: 1% 0 5% 0%;
     }
