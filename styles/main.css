@@ -96,7 +96,7 @@ br {
     font-family: 'Inconsolata', monospace;
 }
 .footer_divider {
-    width: 32%;
+    width: 48%;
     margin: auto;
     border-top: 1px solid #3B3B3B;
 }
@@ -236,7 +236,7 @@ br {
         flex-wrap: wrap;
     }
     .col {
-        margin: 1% 0 5% 0%;
+        margin: 1% 0 24px 0%;
     }
     .span_1of3, .span_2of5, .span_1of4 {
         width: 100%
