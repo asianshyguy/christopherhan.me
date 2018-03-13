@@ -11,12 +11,26 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <link rel="stylesheet" href="http://vjs.zencdn.net/6.6.3/video-js.css">
+    <script src="http://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
 
     <!-- Scripts -->
-    <script src="http://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> </script>
     <script src="../scripts/global.js"></script>  
 
+
+    <script>
+        var DC_player = videojs('#DC_player', {
+            controls: true
+        });
+        // DC_player.on('click', function() {
+        //     if (DC_player.paused()) {
+        //         DC_player.play();
+        //     } else {
+        //         DC_player.pause();
+        //     }
+        // });
+
+    </script>
 </head>
 
 <body>
@@ -67,7 +81,7 @@
 <!-- Row 1 -->
 <div class="row">
     <div class="col span_1of3">
-        <video width="100%" preload="auto" loop autoplay>
+        <video id="DC_player" width="100%" preload="auto" loop muted autoplay>
             <source src="../../assets/work/destination_stamps/mp4/03_OUT_DCFireworks_3_web.mp4">
             </video>
         <p class="caption">
@@ -75,7 +89,7 @@
             </p>
         </div>
     <div class="col span_1of3">
-        <video width="100%" preload="auto" loop autoplay>
+        <video id="Denali_player" width="100%" preload="auto" loop muted autoplay>
             <source src="../../assets/work/destination_stamps/mp4/02_Denali_OUT_web.mp4">
             </video>
         <p class="caption">
@@ -83,7 +97,7 @@
             </p>
         </div>
     <div class="col span_1of3">
-        <video width="100%" preload="auto" loop autoplay>
+        <video id="Antelope_player" width="100%" preload="auto" loop muted autoplay>
             <source src="../../assets/work/destination_stamps/mp4/01_Antelope_OUT_web.mp4">
             </video>
         <p class="caption">
@@ -94,7 +108,7 @@
 <!-- Row 2 -->
 <div class="row">
     <div class="col span_1of3">
-        <video width="100%" preload="auto" loop autoplay>
+        <video id="DMZ_player" width="100%" preload="auto" loop muted autoplay>
             <source src="../../assets/work/destination_stamps/mp4/04_OUT_DMZ_web.mp4">
             </video>
         <p class="caption">
@@ -102,7 +116,7 @@
             </p>
         </div>
     <div class="col span_1of3">
-        <video width="100%" preload="auto" loop autoplay>
+        <video width="100%" preload="auto" loop muted autoplay>
             <source src="../../assets/work/destination_stamps/mp4/05_OUT_snowmonkey4_web.mp4">
             </video>
         <p class="caption">
@@ -110,7 +124,7 @@
             </p>
         </div>
     <div class="col span_1of3">
-        <video width="100%" preload="auto" loop autoplay>
+        <video width="100%" preload="auto" loop muted autoplay>
             <source src="../../assets/work/destination_stamps/mp4/06_OUT_Tulips_web.mp4">
             </video>
         <p class="caption">
@@ -123,7 +137,7 @@
     <div class="col span_1of5">
         </div>
     <div class="col span_2of5">
-        <video width="100%" preload="auto" loop autoplay>
+        <video width="100%" preload="auto" loop muted autoplay>
             <source src="../../assets/work/destination_stamps/mp4/07_jiro_web.mp4">
             </video>
         <p class="caption">
@@ -131,7 +145,7 @@
             </p>
         </div>
     <div class="col span_2of5">
-        <video width="100%" preload="auto" loop autoplay>
+        <video width="100%" preload="auto" loop muted autoplay>
             <source src="../../assets/work/destination_stamps/mp4/08_GP_Lake_web.mp4">
             </video>
         <p class="caption">
