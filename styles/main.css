@@ -20,8 +20,9 @@ body{
 /* This is for Page Tag Lines */
 .head2 {
     font-family: Avenir;
-    font-size: 30pt;
+    font-size: 16pt;
     font-weight: 600;
+    margin-bottom: 8px;
 }
 /* This is for page details */
 .head3 {
@@ -37,6 +38,7 @@ body{
     font-weight: 100;
     /* width: 65%; */
     max-width: 750px;
+    text-align: left;
 }
 .caption {
     font-family: 'Inconsolata', monospace;
@@ -45,15 +47,23 @@ body{
     padding-top: 3px;
     color: #3B3B3B;
 }
+ul.caption{
+    text-align: left;
+}
+.underline {
+    text-decoration: underline;
+}
 a {
     text-decoration: none;
-
 }
 a:visited {
     color: inherit;
 }
 br {
     line-height: 28pt;
+}
+ul {
+    padding-left: 24px;
 }
 
 
@@ -81,7 +91,7 @@ br {
     font-size: 16pt;
     line-height: 0pt;
 }
-.nav_link:hover {
+.nav_link:hover { 
     border-bottom: 5px solid #7CDCFF;
     transition-duration: .25s;
 }
@@ -147,6 +157,9 @@ br {
 .span_1of3 {
     width: 32%;
 }
+.span_2of3 {
+    width:64%;
+}
 .span_1of4{
     width: 23.5%;
 }
@@ -201,6 +214,26 @@ br {
     height: 100%;
 }
 
+
+/*  */
+/* THIS STUFF IS JUST FOR THAT PAGE */ 
+/* PAGE SPECIFIC STUFF */
+/* BIO PAGE!! */
+#profile_pic {
+    padding-top: 16px;
+    text-align: right;
+}
+#experimenting {
+    margin-left: -2%;
+}
+#other_stuff {
+    margin-left: 8%;
+}
+
+
+
+
+
 /* Gotta make it responsive */
 /* Tab */
 @media (max-width: 800px) {
@@ -213,9 +246,16 @@ br {
     .span_1of4 {
         width: 48%
     }
+    #experimenting {
+        margin-left: 0;
+    }
+    #other_stuff {
+        margin-left: 0;
+    }
 }
+
 /* Mobile */
-@media (max-width: 480px) {
+@media (max-width: 500px) {
     /* Nav */
     .nav_link{
         margin-right: 8px;
@@ -226,6 +266,10 @@ br {
     .head1 {
         font-size: 32pt;
         line-height: 35pt;
+    }
+    .head2 {
+        font-size: 14pt;
+        line-height: 20pt;
     }
     .head3 {
         margin: 16pt 0 16pt;
@@ -238,7 +282,7 @@ br {
     .col {
         margin: 1% 0 24px 0%;
     }
-    .span_1of3, .span_2of5, .span_1of4 {
+    .span_1of3, .span_2of3, .span_2of5, .span_1of4 {
         width: 100%
     }
     .span_1of5 {
@@ -247,5 +291,19 @@ br {
     .footer_divider {
         width: 80%;
         border-top: 2px solid #3B3B3B;
-    }    
+    } 
+    
+    
+    /* Page Specific */
+    /* BIO */
+    #experiments {
+        margin-left: 0;
+    }
+    #other_stuff {
+        margin-left: 0;
+    }
+    #profile_pic {
+        text-align: center;
+    }
+    
 }
