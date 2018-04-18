@@ -1,0 +1,69 @@
+@font-face {
+  font-family: Kollektif;
+  src: url("../assets/_global/fonts/Kollektif-Bold.ttf");
+}
+
+body {
+  background-color: black;
+  color: white;
+  font-family: Kollektif;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+  position: relative;
+}
+a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: rgb(255, 255, 255);
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.25s ease-in-out 0s;
+}
+a:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+/* NAV BAR */
+.header-container{
+  margin: 2rem auto;
+  padding: 0 3rem;
+}
+.header {
+  font-size: 36pt;
+  display: inline-block;
+}
+.navigation {
+  font-size: 20pt;
+  padding-top: 16pt;
+  font-style: italic;
+  float: right;
+  display: inline-block;
+}
+
+
+/* VIMEO EMBED */
+.embed-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  /* margin: -2rem auto; */
+}
+.embed-container iframe, .embed-container object, .embed-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
