@@ -58,14 +58,14 @@
         function menuToggle(){
             hamburgerToggle();
             dropdownMenuToggle();
-            if (open == 0) {
-                console.log('initiate');
-                setTimeout(displayNone(), 2000);
-                console.log('2 sec later');
-            } else {
-                setTimeout(displayBlock(), 2000);
+            // if (open == 0) {
+            //     console.log('initiate');
+            //     setTimeout(displayNone(), 2000);
+            //     console.log('2 sec later');
+            // } else {
+            //     setTimeout(displayBlock(), 2000);
 
-            }
+            // }
         }
     </script>
 
@@ -79,11 +79,15 @@
             Christopher Han
         </div>
         <div class="navigation">
+            <a href="mailto:christopher3han@gmail.com?subject=Job%20Inquiry" target="_top">Contact</a>
+        </div>
+        <div class="navigation" style="margin-right: 32px">
             <a href="./pages/bio.html">Bio</a>
         </div>
         <div class="navigation">
-            <a href="./index.html" style="margin-right: 2rem">Reel</a>
+            <a href="./index.html" style="margin-right: 32px">Reel</a>
         </div>
+        
 
         <div class="hamburger-container">
             <button id="hamburger" class="hamburger hamburger--spring" type="button" onclick="menuToggle()">
@@ -91,16 +95,20 @@
                     <span class="hamburger-inner"></span>
                 </span>
             </button>
-            <div id="dropdown-menu" class="dropdown-menu display-none">
+            <div id="dropdown-menu" class="dropdown-menu">
                 <div class="dropdown-menu-item" style="border-bottom: 1px solid white; margin-bottom: 20px;">
                     <a href="./index.html">Reel</a>
                 </div>
-                <div class="dropdown-menu-item">
+                <div class="dropdown-menu-item" style="border-bottom: 1px solid white; margin-bottom: 20px;">
                     <a href="./pages/bio.html">Bio</a>
+                </div>
+                <div class="dropdown-menu-item">
+                    <a href="mailto:christopher3han@gmail.com?subject=Job%20Inquiry" target="_top">Contact</a>
                 </div>
             </div>
         </div>
     </div>
+
     <div class="content-container">
         <div class="embed-container">
             <iframe 

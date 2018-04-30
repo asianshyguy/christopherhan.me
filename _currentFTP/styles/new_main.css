@@ -171,14 +171,11 @@ button:focus {outline:0 !important;}
 
 /* Nav Breakpoints */
 /* Breaking the columns */
+/* Bringing out hamburger menu */
 @media only screen and (max-width:850px) {
   .flex-columns { display: block; }
   .flex-fixed { display: none; }
   #hidden-pic { display: block; }
-}
-
-/* Bringing out hamburger menu */
-@media only screen and (max-width:750px) {
   .sidebar {
     width: 200px;
     float: none;
