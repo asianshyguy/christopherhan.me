@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-117751216-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-117751216-1');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Christopher Han</title>
+
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
+    <link rel="icon" type="image/png" href="./assets//fav_icon.png">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src='./scripts/node_modules/jquery.transit/jquery.transit.js'></script>
+    <script src='./scripts/menuAnimation.js'></script>
+
+    <script>
+        
+        $(document).ready(function() {
+            animateIn();
+            setCounter(0);
+            
+            $('.nav-link').hover(menuIn,menuOut);
+
+            // On Motion click
+            $('#motion').on('click', function(){
+                animateOut();
+                setTimeout(motionNav, 650);
+            });
+            // On Design click
+            $('#design').on('click', function(){
+                animateOut();
+                setTimeout(designNav, 650);
+            });
+            // On bio Click
+            $('#bio').on('click', function(){
+                animateOut();
+                setTimeout(bioNav, 650);
+            });
+            // On Contact Click
+
+
+            // test
+            $('button').on('click', animateOut);
+        });
+    </script>
+
+</head>
+<body>
+    <button id="button">click me</button>
+    <div id="home-out">
+        <div id="home-in">
+            <div id="home-content">
+                <div id="home-text">
+                    <h1 style="margin-bottom: 8px">Christopher Han</h1>
+                    <h2>multi-disciplinary storyteller</h2>
+                </div>
+                <div id="home-menu">
+                    <h3 id="motion" class="nav-link">Motion</h3>
+                    <h3 id="design" class="home-menu-item nav-link">Design</h3>
+                    <h3 id="bio" class="home-menu-item nav-link">Bio</h3>
+                    <h3 id ="contact" class="home-menu-item nav-link">Contact</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

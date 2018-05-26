@@ -1,0 +1,143 @@
+@font-face {
+  font-family: Kollektif-Bold;
+  src: url("../assets/fonts/Kollektif-Bold.ttf");
+  /* font-weight: bold; */
+}
+@font-face {
+  font-family: Kollektif;
+  src: url("../assets/fonts/Kollektif.ttf");
+  font-weight: normal;
+}
+@font-face {
+  font-family: Kollektif-Italic;
+  src: url("../assets/fonts/Kollektif-Italic.ttf");
+  font-weight: normal;
+}
+@font-face {
+  font-family: Orkney;
+  src: url("../assets/fonts/Orkney-Regular.otf");
+  font-weight: normal;
+}
+
+
+html {
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+}
+body {
+  background-color: white;
+  height: 100%;
+  margin: 0;
+}
+h1 {
+  font-family: Kollektif-Bold;
+  color: #4A4A4A;
+  margin: 0;
+  font-size: 60px;
+}
+h2 {
+  font-family: Kollektif-Italic;
+  color: #4A4A4A;
+  margin: 0;
+  font-size: 32px;
+}
+h3 {
+  font-family: Kollektif-Bold;
+  color: #4A4A4A;
+  margin: 0;
+  font-size: 24px;
+  display: inline-block;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+p {
+  font-family: Orkney;
+  margin: 0 0 26px;
+  padding: 0;
+  font-size: 18px;
+  line-height: 26px;
+}
+
+/* Home Page */
+#home-out {
+  position: relative;
+  height: 100%;
+  width: 80%;
+  margin: 0 auto;
+}
+#home-in {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  transform: translateY(-50%);
+}
+
+#home-text {
+  opacity: 0;
+  transform: translateY(-85px);
+}
+#home-menu {
+  opacity: 0;
+  width: 50%;
+  margin: 64px auto 0 ;
+  display: inline-block;
+  transform: translateY(85px);
+}
+.nav-link {
+  cursor: pointer;
+}
+.home-menu-item {
+  margin-left: 32px;
+}
+
+/*  */
+/*  */
+/* General */
+.outer-container {
+  width: 75%;
+  margin: 104px auto 0;
+
+}
+#header {
+  margin-bottom: 64px;
+  opacity: 0;
+  transform: translateY(-85px);
+  cursor: pointer;
+}
+.h1 {
+  font-family: Kollektif-Bold;
+  font-size: 54px;
+  line-height: 48px;
+  color: inherit;
+  text-align: left;
+}
+
+#main {
+  display: flex;
+}
+.flex-flex {
+  display: inline-block;
+  width: 100%;
+}
+.flex-fixed {
+  flex-basis: 100%;
+  max-width: 220px;
+  margin-right: 5%
+
+}
+.side-nav-link {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+#motion-side, #design-side, #bio-side, #contact-side {
+  opacity: 0;
+  transform: translateX(-50px);
+}
+#content {
+  opacity: 0;
+}
