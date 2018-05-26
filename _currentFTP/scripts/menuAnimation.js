@@ -41,7 +41,7 @@ function menuOut(){
 //Navigation
 /// Index
 function indexNavP(){
-    window.location.href="../index2.html";
+    window.location.href="../index.html";
 }
 /// Motion
 function motionNav() {

@@ -16,131 +16,62 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Christopher Han</title>
 
-    <link rel="stylesheet" type="text/css" href="styles/new_main.css">
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
     <link rel="icon" type="image/png" href="./assets//fav_icon.png">
-    <link rel="stylesheet" href="./styles/hamburger/dist/hamburgers.css">
     
-    <script src="https://player.vimeo.com/api/player.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src='./scripts/node_modules/jquery.transit/jquery.transit.js'></script>
+    <script src='./scripts/menuAnimation.js'></script>
 
-    <!-- Menu Toggle Script -->
     <script>
-        var open = 0;
-        function hamburgerToggle(){
-            var menu = document.getElementById('hamburger');
-            menu.classList.toggle('is-active');
-            console.log('hamburger');
-            if (open == 0) {
-                open ++;
-            } else {
-                open --;
-            }
-            console.log(open);
-        }
-        function dropdownMenuToggle(){
-            var dropdownMenu = document.getElementById('dropdown-menu');
-            dropdownMenu.classList.toggle('drop-active');
-            console.log('dropdown')
-        }
-        function displayNone(){
-            var dropdown = document.getElementById('dropdown-menu');
-            dropdown.classList.remove('display-yes');
-            dropdown.classList.add('display-none');
-            console.log('display none');
-        }
-        function displayBlock(){
-            var dropdown = document.getElementById('dropdown-menu');
-            dropdown.classList.remove('display-none');
-            dropdown.classList.add('display-yes');
-            console.log('display-block');
-        }
+        
+        $(document).ready(function() {
+            animateIn();
+            setCounter(0);
+            
+            $('.nav-link').hover(menuIn,menuOut);
 
-        // final on-click, toggle output function
-        function menuToggle(){
-            hamburgerToggle();
-            dropdownMenuToggle();
-            // if (open == 0) {
-            //     console.log('initiate');
-            //     setTimeout(displayNone(), 2000);
-            //     console.log('2 sec later');
-            // } else {
-            //     setTimeout(displayBlock(), 2000);
+            // On Motion click
+            $('#motion').on('click', function(){
+                animateOut();
+                setTimeout(motionNav, 650);
+            });
+            // On Design click
+            $('#design').on('click', function(){
+                animateOut();
+                setTimeout(designNav, 650);
+            });
+            // On bio Click
+            $('#bio').on('click', function(){
+                animateOut();
+                setTimeout(bioNav, 650);
+            });
+            // On Contact Click
 
-            // }
-        }
+
+            // test
+            $('button').on('click', animateOut);
+        });
     </script>
-
 
 </head>
 <body>
-
-<div class="main-container">
-    <div class="header-container">
-        <div class="header">
-            Christopher Han
-        </div>
-        <div class="navigation">
-            <a href="mailto:christopher3han@gmail.com?subject=Job%20Inquiry" target="_top">Contact</a>
-        </div>
-        <div class="navigation" style="margin-right: 32px">
-            <a href="./pages/bio.html">Bio</a>
-        </div>
-        <div class="navigation">
-            <a href="./index.html" style="margin-right: 32px">Reel</a>
-        </div>
-        
-
-        <div class="hamburger-container">
-            <button id="hamburger" class="hamburger hamburger--spring" type="button" onclick="menuToggle()">
-                <span class="hamburger-box">
-                    <span class="hamburger-inner"></span>
-                </span>
-            </button>
-            <div id="dropdown-menu" class="dropdown-menu">
-                <div class="dropdown-menu-item" style="border-bottom: 1px solid white; margin-bottom: 20px;">
-                    <a href="./index.html">Reel</a>
+    <button id="button">click me</button>
+    <div id="home-out">
+        <div id="home-in">
+            <div id="home-content">
+                <div id="home-text">
+                    <h1 style="margin-bottom: 8px">Christopher Han</h1>
+                    <h2>multi-disciplinary storyteller</h2>
                 </div>
-                <div class="dropdown-menu-item" style="border-bottom: 1px solid white; margin-bottom: 20px;">
-                    <a href="./pages/bio.html">Bio</a>
-                </div>
-                <div class="dropdown-menu-item">
-                    <a href="mailto:christopher3han@gmail.com?subject=Job%20Inquiry" target="_top">Contact</a>
+                <div id="home-menu">
+                    <h3 id="motion" class="nav-link">Motion</h3>
+                    <h3 id="design" class="home-menu-item nav-link">Design</h3>
+                    <h3 id="bio" class="home-menu-item nav-link">Bio</h3>
+                    <h3 id ="contact" class="home-menu-item nav-link">Contact</h3>
                 </div>
             </div>
         </div>
     </div>
-
-    <div class="content-container">
-        <div class="embed-container">
-            <iframe 
-                src="https://player.vimeo.com/video/260190036"
-                frameborder="0"
-                webkitAllowFullScreen
-                mozallowfullscreen
-                allowFullScreen
-                >
-            </iframe>
-            <script>
-                var iframe = document.querySelector('iframe');
-
-                var player = new Vimeo.Player(iframe);
-
-                player.on('play', function(){
-                    console.log('You are playing :)');
-                    document.querySelector('.embed-container').scrollIntoView({
-                        behavior:'smooth'
-                    })
-                });
-                player.on('pause', function(){
-                    console.log('You paused the player :(');
-                    document.querySelector('.header-container').scrollIntoView({
-                        behavior:'smooth'
-                    })
-                });
-            </script>
-        </div>
-    </div>
-</div>
-
-
 </body>
 </html>
